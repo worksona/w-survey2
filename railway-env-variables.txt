@@ -1,0 +1,49 @@
+# Copy these environment variables to Railway
+# Replace the placeholder secrets with your actual generated secrets
+
+# ============================================
+# REQUIRED - Application URLs
+# ============================================
+WEBAPP_URL=https://${{RAILWAY_PUBLIC_DOMAIN}}
+NEXTAUTH_URL=https://${{RAILWAY_PUBLIC_DOMAIN}}
+
+# ============================================
+# REQUIRED - Secrets (Replace with your actual secrets)
+# ============================================
+ENCRYPTION_KEY=YOUR_FIRST_SECRET_HERE
+NEXTAUTH_SECRET=YOUR_SECOND_SECRET_HERE
+CRON_SECRET=YOUR_THIRD_SECRET_HERE
+
+# ============================================
+# REQUIRED - Database (Auto-configured by Railway)
+# ============================================
+DATABASE_URL=${{Postgres.DATABASE_URL}}
+
+# ============================================
+# REQUIRED - Basic Settings
+# ============================================
+LOG_LEVEL=info
+
+# ============================================
+# RECOMMENDED - Disable email features for quick start
+# ============================================
+EMAIL_VERIFICATION_DISABLED=1
+PASSWORD_RESET_DISABLED=1
+
+# ============================================
+# REQUIRED - Minimal email config (for Railway deployment)
+# ============================================
+MAIL_FROM=noreply@example.com
+MAIL_FROM_NAME=Formbricks
+SMTP_HOST=localhost
+SMTP_PORT=1025
+SMTP_USER=smtpUser
+SMTP_PASSWORD=smtpPassword
+
+# ============================================
+# INSTRUCTIONS:
+# ============================================
+# 1. Replace YOUR_FIRST_SECRET_HERE, YOUR_SECOND_SECRET_HERE, and YOUR_THIRD_SECRET_HERE with your actual secrets
+# 2. Copy all variables to Railway's Variables tab
+# 3. Railway will automatically replace ${{RAILWAY_PUBLIC_DOMAIN}} and ${{Postgres.DATABASE_URL}}
+# 4. Deploy!

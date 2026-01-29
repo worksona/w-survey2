@@ -1,0 +1,26 @@
+# ============================================
+# COPY AND PASTE THESE TO RAILWAY
+# ============================================
+# Instructions:
+# 1. In Railway, click your "web" service
+# 2. Go to "Variables" tab
+# 3. Click "Raw Editor" 
+# 4. Paste ALL of this (after replacing secrets)
+# 5. Replace YOUR_SECRET_1, YOUR_SECRET_2, YOUR_SECRET_3 with your actual secrets
+# ============================================
+
+WEBAPP_URL=https://${{RAILWAY_PUBLIC_DOMAIN}}
+NEXTAUTH_URL=https://${{RAILWAY_PUBLIC_DOMAIN}}
+ENCRYPTION_KEY=YOUR_SECRET_1
+NEXTAUTH_SECRET=YOUR_SECRET_2
+CRON_SECRET=YOUR_SECRET_3
+DATABASE_URL=${{Postgres.DATABASE_URL}}
+EMAIL_VERIFICATION_DISABLED=1
+PASSWORD_RESET_DISABLED=1
+MAIL_FROM=noreply@example.com
+MAIL_FROM_NAME=Formbricks
+SMTP_HOST=localhost
+SMTP_PORT=1025
+SMTP_USER=smtpUser
+SMTP_PASSWORD=smtpPassword
+LOG_LEVEL=info
