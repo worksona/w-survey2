@@ -1,0 +1,16 @@
+# This file exists to prevent other workflows from blocking Railway deployment
+# Railway deploys independently from GitHub Actions
+name: Railway Deployment Info
+
+on:
+  workflow_dispatch:
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment Info
+        run: |
+          echo "This repository deploys to Railway"
+          echo "Railway builds and deploys automatically when you push to main"
+          echo "Check your Railway dashboard for deployment status"
