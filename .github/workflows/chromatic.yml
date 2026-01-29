@@ -1,10 +1,11 @@
 name: "Chromatic"
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
+  # Disabled automatic runs - uncomment to re-enable
+  # push:
+  #   branches:
+  #     - main
 
 permissions:
   contents: read
